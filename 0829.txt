@@ -1,0 +1,24 @@
+session은 다른브라우저로 링크복사하면 사라진다
+같은 웹 브라우저가 켜져있을때만 값이 유지된다.
+
+page < request < session < application
+
+서버를 껐다가 다시키면 application은 사라지고 
+session은 웹브라우저가 계속 켜져있는한 살아있다.
+
+forward는 다른페이지로 연동시켜준다.
+request.getRequestDispatcher("test2.jsp").forward(request,response);
+test1을 실행했을때 바로 test2페이지를 보여준다.
+
+쿠키삭제하는 방법이 따로 없어서
+cookie.setMaxAge(0); 으로 해준당
+
+jsp <% %> 서버에서 처리하는 문법
+html, 자바스크립트 : 클라이언트가 사용하는 문법
+
+서버에서 처리되는게 있다보니까 웹 언어가 처리되지않는다.
+
+
+db연동
+java.lang.ClassNotFoundException: oracle.java.driver.OracleDriver 
+오류나는 이유 
